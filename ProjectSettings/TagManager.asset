@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Showeree
+    uniqueID: 2037050967
+    locked: 0
+  - name: Soap
+    uniqueID: 3208014153
+    locked: 0
   - name: Player
     uniqueID: 4243588421
     locked: 0
