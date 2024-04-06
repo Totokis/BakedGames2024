@@ -9,6 +9,10 @@ public class Soap : MonoBehaviour
             EventManager.Instance.AddScore();
             Destroy(gameObject);
         }
+        else if(collision.gameObject.GetComponent<Portal>() != null)
+        {
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        }
         else
         {
             Destroy(gameObject);
