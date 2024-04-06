@@ -9,6 +9,10 @@ public class Portal : MonoBehaviour
         if(IsFirst && collision.GetComponent<Soap>() != null)
         {
             collision.transform.position = PortalsController.instance.SecondPortal.transform.position;
+            collision.transform.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+
+            Vector2 horizontalDirection = UnityEngine.Random.value > 0.5f ? Vector2.right : Vector2.left;
+            //spawnedSoap.GetComponent<Rigidbody2D>().AddForce(horizontalDirection * UnityEngine.Random.Range(11f, 122f));
         }
     }
 }
