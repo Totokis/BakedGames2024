@@ -37,26 +37,29 @@ public class PlayerController : MonoBehaviour
             if (_playerInput >= 0)
             {
                 RotateSpriteLeft();
-                Invoke("RotateSpriteRight", _jumpTime);
-                Invoke("UnlockJump", _jumpTime);
             }
             else if (_playerInput < 0)
             {
                 RotateSpriteRight();
-                Invoke("RotateSpriteLeft", _jumpTime);
-                Invoke("UnlockJump", _jumpTime);
             }
+            Invoke("ResetRotation", _jumpTime);
+            Invoke("UnlockJump", _jumpTime);
         }
     }
 
     private void RotateSpriteRight()
     {
-        this.transform.Rotate(0, 0, 90);
+        this.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
     }
 
     private void RotateSpriteLeft()
     {
-        this.transform.Rotate(0, 0, -90);
+        this.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
+    }
+
+    private void ResetRotation()
+    {
+        this.transform.rotation = Quaternion.identity;
     }
 
     private void UnlockJump()
@@ -70,5 +73,13 @@ public class PlayerController : MonoBehaviour
             _playerInput * _speed * Time.fixedDeltaTime,
             0
         );
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (_isMidJump && collision.transform.CompareTag("Wall"))
+        {
+            ResetRotation();
+        }
     }
 }
