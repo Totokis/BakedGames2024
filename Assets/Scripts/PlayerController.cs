@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private bool canSlideRight = true;
 
     [SerializeField] private Single _speed = 250;
+    [SerializeField] private Single _slideSpeed = 400;
 
     private Rigidbody2D rb;
     private Collider2D collider;
@@ -47,7 +48,7 @@ public class PlayerController : MonoBehaviour
                 _isSlidingRight = true;
                 RotateSpriteRight();
             }
-            Invoke("ResetRotation", _jumpTime); //doubluje sie przy œcianie
+            Invoke("ResetRotation", _jumpTime);  //doubluje sie przy œcianie
             Invoke("UnlockJump", _jumpTime);
         }
     }
@@ -85,11 +86,11 @@ public class PlayerController : MonoBehaviour
     {
         if (_isSlidingLeft)
         {
-            rb.velocity = new Vector2(1 * _speed * Time.fixedDeltaTime, 0);
+            rb.velocity = new Vector2(1 * _slideSpeed * Time.fixedDeltaTime, 0);
         }
         else if (_isSlidingRight)
         {
-            rb.velocity = new Vector2(-1 * _speed * Time.fixedDeltaTime, 0);
+            rb.velocity = new Vector2(-1 * _slideSpeed * Time.fixedDeltaTime, 0);
         }
         else if((_playerInput == 1 && !_isSlidingRight) || (_playerInput == -1 && !_isSlidingLeft))
         {
