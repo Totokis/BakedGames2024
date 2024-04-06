@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6711b110f04834ffebfe487c1f0e97d2
+guid: ce585752f60e246b2bc0ef352a8426aa
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -122,9 +122,9 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: 160_90-Pablo
+  - name: soap
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.33333334}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -132,9 +132,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 160
-      height: 90
-    spriteID: 17d3cf2722ab04d0e90730034443d7bb
+      width: 5
+      height: 3
+    spriteID: 5695e1d5d4727442d9b42c665a9543e2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -146,24 +146,24 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1062032250
-    name: 160_90-Pablo
+    guid: 315410629
+    name: soap
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: 160_90-Pablo
+    - name: soap
       frameIndex: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 160
-        height: 90
-      spriteId: 17d3cf2722ab04d0e90730034443d7bb
+        x: 1
+        y: 1
+        width: 5
+        height: 3
+      spriteId: 5695e1d5d4727442d9b42c665a9543e2
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 160, y: 90}
+  canvasSize: {x: 7, y: 5}
