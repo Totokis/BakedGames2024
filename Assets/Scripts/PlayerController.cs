@@ -11,11 +11,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Single _speed = 250;
 
     private Rigidbody2D rb;
+    private Collider2D collider;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        collider = GetComponent<Collider2D>();
     }
 
     void Update()
@@ -49,17 +51,22 @@ public class PlayerController : MonoBehaviour
 
     private void RotateSpriteRight()
     {
+        transform.position = new Vector3(transform.position.x, transform.position.y + (collider.bounds.size.x / 2), transform.position.z);
         this.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
+
     }
 
     private void RotateSpriteLeft()
     {
+        transform.position = new Vector3(transform.position.x, transform.position.y + (collider.bounds.size.x / 2), transform.position.z);
         this.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
+
     }
 
     private void ResetRotation()
     {
         this.transform.rotation = Quaternion.identity;
+        transform.position = new Vector3(transform.position.x, transform.position.y - (collider.bounds.size.y / 2), transform.position.z);
     }
 
     private void UnlockJump()
@@ -80,6 +87,7 @@ public class PlayerController : MonoBehaviour
         if (_isMidJump && collision.transform.CompareTag("Wall"))
         {
             ResetRotation();
+            UnlockJump();
         }
     }
 }
