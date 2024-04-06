@@ -1,15 +1,14 @@
+using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Horizontal player keyboard input
-    //  -1 = Left
-    //   0 = No input
-    //   1 = Right
-    private float playerInput = 0;
-
+    private Boolean _isMidJump = false;
+    private Single _playerInput = 0;
+    private Single _jumpTime = 0.5f;
     // Horizontal player speed
-    [SerializeField] private float speed = 250;
+    [SerializeField] private Single _speed = 250;
 
     private Rigidbody2D rb;
 
@@ -24,7 +23,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Detect and store horizontal player input   
-        playerInput = Input.GetAxisRaw("Horizontal");
+        _playerInput = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -35,17 +34,24 @@ public class PlayerController : MonoBehaviour
     // Swap the player sprite scale to face the movement direction
     void SwapSprite()
     {
-        // Right or no input
-        if (playerInput >= 0)
+        if(!_isMidJump)
         {
-            RotateSpriteLeft();
-            Invoke("RotateSpriteRight", 1f);
-        }
-        // Left
-        else if (playerInput < 0)
-        {
-            RotateSpriteRight();
-            Invoke("RotateSpriteLeft", 1f);
+            _isMidJump = true;
+
+            // Right or no input
+            if (_playerInput >= 0)
+            {
+                RotateSpriteLeft();
+                Invoke("RotateSpriteRight", _jumpTime);
+                Invoke("UnlockJump", _jumpTime);
+            }
+            // Left
+            else if (_playerInput < 0)
+            {
+                RotateSpriteRight();
+                Invoke("RotateSpriteLeft", _jumpTime);
+                Invoke("UnlockJump", _jumpTime);
+            }
         }
     }
 
@@ -59,12 +65,17 @@ public class PlayerController : MonoBehaviour
         this.transform.Rotate(0, 0, -90);
     }
 
+    private void UnlockJump()
+    {
+        _isMidJump = false;
+    }
+
     // Is called automatically every physics step
     void FixedUpdate()
     {
         // Move the player horizontally
         rb.velocity = new Vector2(
-            playerInput * speed * Time.fixedDeltaTime,
+            _playerInput * _speed * Time.fixedDeltaTime,
             0
         );
     }
