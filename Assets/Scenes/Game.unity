@@ -1089,6 +1089,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 339209097801721228, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
   m_PrefabInstance: {fileID: 929111730659407532}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1982655855
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1982655857}
+  - component: {fileID: 1982655856}
+  m_Layer: 0
+  m_Name: SoapGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1982655856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982655855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa4866fb4407ae449aaa31a59ef4b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soapPrefab: {fileID: 5803181750054865727, guid: 9b1bbca52dcc14d4dab90d0b8dd6dc49, type: 3}
+  showerees:
+  - {fileID: 1967997941}
+  - {fileID: 468299282}
+  - {fileID: 346544452}
+  - {fileID: 1033711724}
+--- !u!4 &1982655857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982655855}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1995169771
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,3 +1332,4 @@ SceneRoots:
   - {fileID: 1997074962}
   - {fileID: 1943015842}
   - {fileID: 1368391738}
+  - {fileID: 1982655857}
