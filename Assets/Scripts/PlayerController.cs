@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D collider;
 
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -44,7 +43,7 @@ public class PlayerController : MonoBehaviour
             {
                 RotateSpriteRight();
             }
-            Invoke("ResetRotation", _jumpTime);
+            Invoke("ResetRotation", _jumpTime); //doubluje sie przy œcianie
             Invoke("UnlockJump", _jumpTime);
         }
     }
@@ -65,8 +64,11 @@ public class PlayerController : MonoBehaviour
 
     private void ResetRotation()
     {
-        this.transform.rotation = Quaternion.identity;
-        transform.position = new Vector3(transform.position.x, transform.position.y - (collider.bounds.size.y / 2), transform.position.z);
+        if (this.transform.rotation != Quaternion.identity)
+        {
+            this.transform.rotation = Quaternion.identity;
+            transform.position = new Vector3(transform.position.x, transform.position.y - (collider.bounds.size.y / 2), transform.position.z);
+        }
     }
 
     private void UnlockJump()
