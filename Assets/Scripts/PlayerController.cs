@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     private Boolean _isMidJump = false;
     private Single _playerInput = 0;
     private Single _jumpTime = 0.5f;
+    private bool canSlideLeft = true;
+    private bool canSlideRight = true;
 
     [SerializeField] private Single _speed = 250;
 
@@ -20,7 +22,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
-    { 
+    {
         _playerInput = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -31,15 +33,15 @@ public class PlayerController : MonoBehaviour
 
     void SwapSprite()
     {
-        if(!_isMidJump)
+        if (!_isMidJump)
         {
             _isMidJump = true;
 
-            if (_playerInput >= 0)
+            if (_playerInput > 0 && canSlideRight)
             {
                 RotateSpriteLeft();
             }
-            else if (_playerInput < 0)
+            else if (_playerInput < 0 && canSlideLeft)
             {
                 RotateSpriteRight();
             }
@@ -84,12 +86,41 @@ public class PlayerController : MonoBehaviour
         );
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter(Collision collision)
     {
-        if (_isMidJump && collision.transform.CompareTag("Wall"))
+        Collider myCollider = collision.GetContact(0).thisCollider;
+        // Now do whatever you need with myCollider.
+        // (If multiple colliders were involved in the collision, 
+        // you can find them all by iterating through the contacts)
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Wall"))
         {
-            ResetRotation();
-            UnlockJump();
+            if (collision.gameObject.name == "Wall Left")
+            {
+                canSlideLeft = false;
+            }
+            else if (collision.gameObject.name == "Wall Right")
+            {
+                canSlideRight = false;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Wall"))
+        {
+            if (collision.gameObject.name == "Wall Left")
+            {
+                canSlideLeft = true;
+            }
+            else if (collision.gameObject.name == "Wall Right")
+            {
+                canSlideRight = true;
+            }
         }
     }
 }
