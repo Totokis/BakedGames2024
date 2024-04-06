@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6711b110f04834ffebfe487c1f0e97d2
+guid: 9d60b156cc9564a5cbc3a65a92923ec1
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -122,9 +122,30 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: 160_90-Pablo
+  - name: chlop
     originalName: 
-    pivot: {x: 0.5, y: 0}
+    pivot: {x: 0.5, y: -0.028571429}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 26
+      y: 4
+      width: 13
+      height: 35
+    spriteID: a8f381150655a4235aba19ccca237ba1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 26, y: 4}
+  - name: chlop_Frame_1
+    originalName: 
+    pivot: {x: 0.53571427, y: -0.030303031}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     customData: 
@@ -132,9 +153,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 160
-      height: 90
-    spriteID: 17d3cf2722ab04d0e90730034443d7bb
+      width: 14
+      height: 33
+    spriteID: 1ec04e6ed3ff3471ea7a7b4d1ed62d66
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -146,24 +167,32 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1062032250
-    name: 160_90-Pablo
+    guid: 1398115796
+    name: chlop
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: 160_90-Pablo
+    - name: chlop_Frame_0
       frameIndex: 0
       cellRect:
-        x: 0
-        y: 0
-        width: 160
-        height: 90
-      spriteId: 17d3cf2722ab04d0e90730034443d7bb
+        x: 3
+        y: 1
+        width: 13
+        height: 35
+      spriteId: a8f381150655a4235aba19ccca237ba1
+    - name: chlop_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 2
+        y: 1
+        width: 14
+        height: 33
+      spriteId: 1ec04e6ed3ff3471ea7a7b4d1ed62d66
     linkedCells: []
     parentIndex: -1
   platformSettings: []
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 160, y: 90}
+  canvasSize: {x: 19, y: 37}
