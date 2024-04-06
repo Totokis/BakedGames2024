@@ -20,7 +20,12 @@ public class SoapGenerator : MonoBehaviour
         {
             var showereeIndex = Random.Range(0, showerees.Count - 1);
 
-            Instantiate(soapPrefab, showerees[showereeIndex]);
+            GameObject spawnedSoap = Instantiate(soapPrefab, showerees[showereeIndex]);
+            Vector2 horizontalDirection = UnityEngine.Random.value > 0.5f ? Vector2.right : Vector2.left;
+            spawnedSoap.GetComponent<Rigidbody2D>().AddForce(horizontalDirection * UnityEngine.Random.Range(11f, 122f));
+            spawnedSoap.GetComponent<Rigidbody2D>().AddForce(Vector3.up * UnityEngine.Random.Range(0f, 111f));
+
+
             spawningTime = Random.Range(0.5f, 2.5f);
         }
     }
