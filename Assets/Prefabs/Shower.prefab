@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 7810978539351510867}
   - component: {fileID: 280295619676805684}
   - component: {fileID: 6271502287614968383}
+  - component: {fileID: 8024652671470535449}
   m_Layer: 0
   m_Name: Shower
   m_TagString: Untagged
@@ -164,3 +165,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8539784243384974606}
+--- !u!114 &8024652671470535449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743709191915342057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8bbe289d3c981f4fa8f22991afb2179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 0.3
+  shakeIntensity: 0.15

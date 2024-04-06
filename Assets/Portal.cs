@@ -13,6 +13,7 @@ public class Portal : MonoBehaviour
 
             Vector2 horizontalDirection = UnityEngine.Random.value > 0.5f ? Vector2.right : Vector2.left;
             collision.GetComponent<Rigidbody2D>()?.AddForce(horizontalDirection * UnityEngine.Random.Range(11f, 20f));
+
         }
     }
 }
