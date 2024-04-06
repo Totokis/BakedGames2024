@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3654616799822986951}
   - component: {fileID: 3566362701288300990}
   - component: {fileID: 8771330411559246304}
+  - component: {fileID: 5529910277103938737}
   m_Layer: 0
   m_Name: Soap
   m_TagString: Untagged
@@ -152,3 +153,15 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &5529910277103938737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5803181750054865727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f7f8a78bb29078409019f077ec84a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
