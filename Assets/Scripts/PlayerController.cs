@@ -83,12 +83,17 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if((_playerInput == 1 && !_isSlidingRight) || (_playerInput == -1 && !_isSlidingLeft))
+        if (_isSlidingLeft)
         {
-            rb.velocity = new Vector2(
-                _playerInput * _speed * Time.fixedDeltaTime,
-                0
-            );
+            rb.velocity = new Vector2(1 * _speed * Time.fixedDeltaTime, 0);
+        }
+        else if (_isSlidingRight)
+        {
+            rb.velocity = new Vector2(-1 * _speed * Time.fixedDeltaTime, 0);
+        }
+        else if((_playerInput == 1 && !_isSlidingRight) || (_playerInput == -1 && !_isSlidingLeft))
+        {
+            rb.velocity = new Vector2( _playerInput * _speed * Time.fixedDeltaTime, 0);
         }
     }
 
