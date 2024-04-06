@@ -21,40 +21,42 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Is called automatically every graphics frame
     void Update()
     {
         // Detect and store horizontal player input   
         playerInput = Input.GetAxisRaw("Horizontal");
 
-        // NB: Here, you might want to set the player's animation,
-        // e.g. idle or walking
-
-        // Swap the player sprite scale to face the movement direction
-        //SwapSprite();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SwapSprite();
+        }
     }
 
     // Swap the player sprite scale to face the movement direction
     void SwapSprite()
     {
-        // Right
-        if (playerInput > 0)
+        // Right or no input
+        if (playerInput >= 0)
         {
-            transform.localScale = new Vector3(
-                Mathf.Abs(transform.localScale.x),
-                transform.localScale.y,
-                transform.localScale.z
-            );
+            RotateSpriteLeft();
+            Invoke("RotateSpriteRight", 1f);
         }
         // Left
         else if (playerInput < 0)
         {
-            transform.localScale = new Vector3(
-                -1 * Mathf.Abs(transform.localScale.x),
-                transform.localScale.y,
-                transform.localScale.z
-            );
+            RotateSpriteRight();
+            Invoke("RotateSpriteLeft", 1f);
         }
+    }
+
+    private void RotateSpriteRight()
+    {
+        this.transform.Rotate(0, 0, 90);
+    }
+
+    private void RotateSpriteLeft()
+    {
+        this.transform.Rotate(0, 0, -90);
     }
 
     // Is called automatically every physics step
