@@ -2,24 +2,68 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Vector2 MovementSpeed = new Vector2(10.0f, 10.0f);
-    private new Rigidbody2D rigidbody2D;
-    private Vector2 inputVector = new Vector2(0.0f, 0.0f);
+    // Horizontal player keyboard input
+    //  -1 = Left
+    //   0 = No input
+    //   1 = Right
+    private float playerInput = 0;
 
-    void Awake()
+    // Horizontal player speed
+    [SerializeField] private float speed = 250;
+
+    private Rigidbody2D rb;
+
+    // Initialises this component
+    // (NB: Is called automatically before the first frame update)
+    void Start()
     {
-        rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
-        rigidbody2D.angularDrag = 0.0f;
-        rigidbody2D.gravityScale = 0.0f;
+        // Get component references
+        rb = GetComponent<Rigidbody2D>();
     }
 
+    // Is called automatically every graphics frame
     void Update()
     {
-        inputVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        // Detect and store horizontal player input   
+        playerInput = Input.GetAxisRaw("Horizontal");
+
+        // NB: Here, you might want to set the player's animation,
+        // e.g. idle or walking
+
+        // Swap the player sprite scale to face the movement direction
+        //SwapSprite();
     }
 
+    // Swap the player sprite scale to face the movement direction
+    void SwapSprite()
+    {
+        // Right
+        if (playerInput > 0)
+        {
+            transform.localScale = new Vector3(
+                Mathf.Abs(transform.localScale.x),
+                transform.localScale.y,
+                transform.localScale.z
+            );
+        }
+        // Left
+        else if (playerInput < 0)
+        {
+            transform.localScale = new Vector3(
+                -1 * Mathf.Abs(transform.localScale.x),
+                transform.localScale.y,
+                transform.localScale.z
+            );
+        }
+    }
+
+    // Is called automatically every physics step
     void FixedUpdate()
     {
-        rigidbody2D.MovePosition(rigidbody2D.position + (inputVector * MovementSpeed * Time.fixedDeltaTime));
+        // Move the player horizontally
+        rb.velocity = new Vector2(
+            playerInput * speed * Time.fixedDeltaTime,
+            0
+        );
     }
 }
