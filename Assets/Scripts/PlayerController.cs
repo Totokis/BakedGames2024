@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     // (NB: Is called automatically before the first frame update)
     void Start()
     {
+        EventManager.Instance.AddScore();
         // Get component references
         rb = GetComponent<Rigidbody2D>();
     }

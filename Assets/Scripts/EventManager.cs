@@ -11,6 +11,6 @@ public class EventManager : MonoBehaviour
         else
             Destroy(gameObject);
     }
-    public event Action TestAction;
-    public void StartTestActionEvent() => TestAction?.Invoke();
+    public event Action AddScoreAction;
+    public void AddScore() => AddScoreAction?.Invoke();
 }

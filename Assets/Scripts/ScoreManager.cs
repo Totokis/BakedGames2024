@@ -10,6 +10,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         _scoreText = GetComponent<TextMeshProUGUI>();
+        EventManager.Instance.AddScoreAction += AddScore;
     }
     private void UpdateText()
     {
