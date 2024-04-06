@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Boolean _isMidJump = false;
+    private Boolean _isSlidingLeft = false;
+    private Boolean _isSlidingRight = false;
+    private Boolean _isMidSlide => _isSlidingLeft || _isSlidingRight;
     private Single _playerInput = 0;
     private Single _jumpTime = 0.5f;
     private bool canSlideLeft = true;
@@ -33,16 +35,16 @@ public class PlayerController : MonoBehaviour
 
     void SwapSprite()
     {
-        if (!_isMidJump)
+        if (!_isMidSlide)
         {
-            _isMidJump = true;
-
             if (_playerInput > 0 && canSlideRight)
             {
                 RotateSpriteLeft();
+                _isSlidingLeft = true;
             }
             else if (_playerInput < 0 && canSlideLeft)
             {
+                _isSlidingRight = true;
                 RotateSpriteRight();
             }
             Invoke("ResetRotation", _jumpTime); //doubluje sie przy œcianie
@@ -75,15 +77,19 @@ public class PlayerController : MonoBehaviour
 
     private void UnlockJump()
     {
-        _isMidJump = false;
+        _isSlidingLeft = false;
+        _isSlidingRight = false;
     }
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(
-            _playerInput * _speed * Time.fixedDeltaTime,
-            0
-        );
+        if((_playerInput == 1 && !_isSlidingRight) || (_playerInput == -1 && !_isSlidingLeft))
+        {
+            rb.velocity = new Vector2(
+                _playerInput * _speed * Time.fixedDeltaTime,
+                0
+            );
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
