@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     private BoxCollider2D boxCollider;
     private StaminaController staminaController;
 
+    public Transform pickupPoint;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

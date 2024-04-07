@@ -29,14 +29,31 @@ public class Soap : MonoBehaviour
             LeanTween.scale(gameObject, Vector3.zero, 0.5f)
                 .setEaseOutSine();
 
-            print("Pick");
+            LeanTween.move(gameObject, FindObjectOfType<PlayerController>().pickupPoint, 0.69f)
+                .setEaseOutSine();
+
 
             Invoke(nameof(GetRid), 1f);
         }
         else if (!picked && collision.transform.CompareTag("Floor"))
         {
-            print("Floor");
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+            Vector3 slipDirection = lastVelocity.normalized;
+            slipDirection.y = 0;
+            float soapSlipSpeed = UnityEngine.Random.Range(1f, 2.5f); // Consider setting a consistent speed instead of random
+            GetComponent<Rigidbody2D>().velocity = slipDirection * soapSlipSpeed;
+            
             Invoke("DisplayWarning", 2f);
+        }
+    }
+
+    private Vector2 lastVelocity;
+    private void Update()
+    {
+        // Keep updating the lastVelocity with the current velocity each frame
+        if (GetComponent<Rigidbody2D>())
+        {
+            lastVelocity = GetComponent<Rigidbody2D>().velocity;
         }
     }
 
@@ -51,7 +68,6 @@ public class Soap : MonoBehaviour
         {
             return;
         }
-        print("Warning");
 
         transform.parent.Find("Warning").gameObject.SetActive(true);
         GameManager.Instance._isWarningDisplayed = true;
