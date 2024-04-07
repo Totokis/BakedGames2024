@@ -2312,6 +2312,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1109737733590450193, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4641556337858682931, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6549627474924950109, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
       propertyPath: m_Name
       value: Showeree1

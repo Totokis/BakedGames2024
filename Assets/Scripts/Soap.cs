@@ -21,12 +21,20 @@ public class Soap : MonoBehaviour
         }
         else if (collision.transform.CompareTag("Floor"))
         {
-            Invoke("EndGame", 2f);
+            
+            Invoke("DisplayWarning", 2f);
         }
+    }
+
+    private void DisplayWarning()
+    {
+        transform.parent.Find("Warning").gameObject.SetActive(true);
+        Invoke("EndGame", 1f);
     }
 
     private void EndGame()
     {
+        
         SceneManager.LoadScene("GameOver");
     }
 }
