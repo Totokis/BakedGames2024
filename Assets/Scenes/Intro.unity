@@ -269,6 +269,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa2c839763da4d0488e36ee3cf62a947, type: 3}
+--- !u!114 &750965628 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5163675850479868109, guid: aa2c839763da4d0488e36ee3cf62a947, type: 3}
+  m_PrefabInstance: {fileID: 750965627}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &750965629 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 349461765089979578, guid: aa2c839763da4d0488e36ee3cf62a947, type: 3}
+  m_PrefabInstance: {fileID: 750965627}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &786101895
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,8 +984,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a409352432a71774eb356014258de47e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlackScreen: {fileID: 0}
-  MainObjectToTurnOn: {fileID: 0}
+  BlackScreen: {fileID: 750965628}
+  MainObjectToTurnOn: {fileID: 750965629}
   FadingTime: 0.3
   ShouldFadeOutAtTheStart: 1
 --- !u!4 &2077072608
