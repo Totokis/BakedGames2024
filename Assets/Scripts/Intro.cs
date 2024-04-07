@@ -5,6 +5,6 @@ public class Intro : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("Game");
+        this.GetComponent<ChangeScene>().LoadOtherScene(SceneNames.GameSTR);
     }
 }

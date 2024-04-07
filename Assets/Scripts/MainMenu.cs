@@ -5,6 +5,6 @@ public class MainMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("NewGameIntro");
+        this.GetComponent<ChangeScene>().LoadOtherScene(SceneNames.IntroSTR);
     }
 }
