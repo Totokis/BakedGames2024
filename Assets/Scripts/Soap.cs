@@ -5,19 +5,28 @@ public class Soap : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.gameObject.GetComponent<Portal>() != null)
+        {
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print(collision.gameObject.tag);
         if (collision.transform.CompareTag("Player"))
         {
             EventManager.Instance.AddScore();
             Destroy(gameObject);
         }
-        else if(collision.gameObject.GetComponent<Portal>() != null)
+        else if (collision.transform.CompareTag("Floor"))
         {
-            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            Invoke("EndGame", 2f);
         }
-        else
-        {
-            Destroy(gameObject);
-            SceneManager.LoadScene("GameOver");
-        }
+    }
+
+    private void EndGame()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }
