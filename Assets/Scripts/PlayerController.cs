@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private Collider2D collider;
     private Animator animator;
     private BoxCollider2D boxCollider;
+    private StaminaController staminaController;
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class PlayerController : MonoBehaviour
         collider = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        staminaController = GetComponent<StaminaController>();
     }
 
     void Update()
@@ -33,7 +35,7 @@ public class PlayerController : MonoBehaviour
         _playerInput = Input.GetAxisRaw("Horizontal");
         animator.SetFloat("Speed", Math.Abs(_playerInput * _speed));
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && staminaController.CanUseSlide())
         {
             SwapSprite();
         }
@@ -59,6 +61,7 @@ public class PlayerController : MonoBehaviour
                 boxCollider.size = new Vector3(0.47f, 0.12f);
                 _isSlidingLeft = true;
                 animator.SetBool("IsSliding", true);
+                staminaController.UseSlide();
             }
             else if (_playerInput < 0 && canSlideLeft)
             {
@@ -67,6 +70,7 @@ public class PlayerController : MonoBehaviour
                 boxCollider.size = new Vector3(0.47f, 0.12f);
                 _isSlidingRight = true;
                 animator.SetBool("IsSliding", true);
+                staminaController.UseSlide();
             }
             //Invoke("ResetRotation", _jumpTime);  //doubluje sie przy œcianie
             Invoke("UnlockJump", _jumpTime);
