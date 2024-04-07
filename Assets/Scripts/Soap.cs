@@ -96,6 +96,6 @@ public class Soap : MonoBehaviour
 
     private void EndGame()
     {
-        SceneManager.LoadScene("GameOver");
+        FindFirstObjectByType<ChangeSceneSimplifier>().ChangeToOutroScene();
     }
 }
