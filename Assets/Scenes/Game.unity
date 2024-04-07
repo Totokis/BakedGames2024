@@ -167,6 +167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5721339179563798604, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6549627474924950109, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
       propertyPath: m_Name
       value: Showeree3
@@ -561,6 +565,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 339209097801721228, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5721339179563798604, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6549627474924950109, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
@@ -1078,6 +1086,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 339209097801721228, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5721339179563798604, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6549627474924950109, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
