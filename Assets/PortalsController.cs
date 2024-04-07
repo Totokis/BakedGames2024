@@ -7,7 +7,7 @@ public class PortalsController : MonoBehaviour
     public Portal FirstPortal;
     public Portal SecondPortal;
 
-    public void StartPortals()
+    public void StartPortals(float offset)
     {
 
     }
