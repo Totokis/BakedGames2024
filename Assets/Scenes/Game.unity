@@ -7226,11 +7226,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1811740208548759688, guid: f5772354d056d1c4da8ad330dc1ca5d9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 237.16
+      value: 233
       objectReference: {fileID: 0}
     - target: {fileID: 1811740208548759688, guid: f5772354d056d1c4da8ad330dc1ca5d9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 17.5
+      value: 20.44
       objectReference: {fileID: 0}
     - target: {fileID: 1811740208548759688, guid: f5772354d056d1c4da8ad330dc1ca5d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7250,15 +7250,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6202054720548806314, guid: f5772354d056d1c4da8ad330dc1ca5d9, type: 3}
       propertyPath: m_fontSize
-      value: 72
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6202054720548806314, guid: f5772354d056d1c4da8ad330dc1ca5d9, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 708e72b222e49dd42b5070c4faf0c8f7, type: 2}
+    - target: {fileID: 6202054720548806314, guid: f5772354d056d1c4da8ad330dc1ca5d9, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6202054720548806314, guid: f5772354d056d1c4da8ad330dc1ca5d9, type: 3}
       propertyPath: m_fontSizeBase
-      value: 72
+      value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 6202054720548806314, guid: f5772354d056d1c4da8ad330dc1ca5d9, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5987051574848711543, guid: 708e72b222e49dd42b5070c4faf0c8f7, type: 2}
     - target: {fileID: 6202054720548806314, guid: f5772354d056d1c4da8ad330dc1ca5d9, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6202054720548806314, guid: f5772354d056d1c4da8ad330dc1ca5d9, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7226937030833842680, guid: f5772354d056d1c4da8ad330dc1ca5d9, type: 3}
       propertyPath: m_Name
