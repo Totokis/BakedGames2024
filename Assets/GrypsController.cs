@@ -27,7 +27,7 @@ public class GrypsController : MonoBehaviour
         OknoWCeli.PlayOneShot(Grypses[grypsIndicesOrder[currentGryps]]);
         currentGryps++;
 
-        yield return new WaitForSeconds(Grypses[currentGryps].length + UnityEngine.Random.Range(2.5f, 4f));
+        yield return new WaitForSeconds(Grypses[currentGryps].length + UnityEngine.Random.Range(2f, 3.5f));
 
         StartCoroutine(StartGrypsing());
     }
