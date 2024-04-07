@@ -216,8 +216,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e67089adda4d34cbe86adafc05c1fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 285
-  _slideSpeed: 415
+  _speed: 300
+  _slideSpeed: 425
   pickupPoint: {fileID: 2364858206487189614}
 --- !u!50 &1375266478711976263
 Rigidbody2D:
