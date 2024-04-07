@@ -52,15 +52,19 @@ public class PlayerController : MonoBehaviour
         {
             if (_playerInput > 0 && canSlideRight)
             {
-                RotateSpriteLeft();
+                //RotateSpriteLeft();
                 _isSlidingLeft = true;
+                print("issliding");
+                animator.SetBool("IsSliding", true);
             }
             else if (_playerInput < 0 && canSlideLeft)
             {
+                //RotateSpriteRight();
                 _isSlidingRight = true;
-                RotateSpriteRight();
+                print("issliding");
+                animator.SetBool("IsSliding", true);
             }
-            Invoke("ResetRotation", _jumpTime);  //doubluje sie przy œcianie
+            //Invoke("ResetRotation", _jumpTime);  //doubluje sie przy œcianie
             Invoke("UnlockJump", _jumpTime);
         }
     }
@@ -69,14 +73,12 @@ public class PlayerController : MonoBehaviour
     {
         transform.position = new Vector3(transform.position.x, transform.position.y + (collider.bounds.size.x / 2), transform.position.z);
         this.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 90));
-
     }
 
     private void RotateSpriteLeft()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y + (collider.bounds.size.x / 2), transform.position.z);
         this.transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
-
     }
 
     private void ResetRotation()
@@ -92,6 +94,7 @@ public class PlayerController : MonoBehaviour
     {
         _isSlidingLeft = false;
         _isSlidingRight = false;
+        animator.SetBool("IsSliding", false);
     }
 
     void FixedUpdate()
