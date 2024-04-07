@@ -36,11 +36,11 @@ public class PlayerController : MonoBehaviour
             SwapSprite();
         }
 
-        if (_playerInput > 0)
+        if (_playerInput > 0 && !_isSlidingRight)
         {
             GetComponent<SpriteRenderer>().flipX = false; // Original orientation (facing right)
         }
-        else if (_playerInput < 0)
+        else if (_playerInput < 0 && !_isSlidingLeft)
         {
             GetComponent<SpriteRenderer>().flipX = true; // Flip sprite (facing left)
         }
@@ -54,14 +54,12 @@ public class PlayerController : MonoBehaviour
             {
                 //RotateSpriteLeft();
                 _isSlidingLeft = true;
-                print("issliding");
                 animator.SetBool("IsSliding", true);
             }
             else if (_playerInput < 0 && canSlideLeft)
             {
                 //RotateSpriteRight();
                 _isSlidingRight = true;
-                print("issliding");
                 animator.SetBool("IsSliding", true);
             }
             //Invoke("ResetRotation", _jumpTime);  //doubluje sie przy œcianie
