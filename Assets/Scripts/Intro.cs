@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class Intro : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("NewGameIntro");
+        SceneManager.LoadScene("Game");
     }
 }
