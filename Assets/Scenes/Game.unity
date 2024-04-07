@@ -1047,7 +1047,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f459336a32e67b74d9796f5016517420, type: 3}
   OknoWCeli: {fileID: 965470286}
   grypsIndicesOrder: 
-  currentGryps: 0
+  currentGrypsIndex: 0
 --- !u!4 &965470285
 Transform:
   m_ObjectHideFlags: 0
@@ -1252,6 +1252,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 339209097801721228, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
   m_PrefabInstance: {fileID: 377384647}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1085515263
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1085515265}
+  - component: {fileID: 1085515264}
+  m_Layer: 0
+  m_Name: Timeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &1085515264
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085515263}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: cbaa32a71cff541ef87553e20613c725, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &1085515265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085515263}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1112180704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,7 +1457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e25c6820fb84e646a1021b3f780afdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isWarningDisplayed: 0
+  _isWarningDisplayed: 0
 --- !u!4 &1123877248
 Transform:
   m_ObjectHideFlags: 0
@@ -2825,3 +2874,4 @@ SceneRoots:
   - {fileID: 506084719}
   - {fileID: 965470285}
   - {fileID: 1123877248}
+  - {fileID: 1085515265}
