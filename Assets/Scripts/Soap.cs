@@ -31,6 +31,8 @@ public class Soap : MonoBehaviour
 
             LeanTween.move(gameObject, FindObjectOfType<PlayerController>().pickupPoint, 0.69f)
                 .setEaseOutSine();
+            print("Pick");
+            GameManager.Instance.DisplaySoapOnPile();
 
 
             Invoke(nameof(GetRid), 1f);
