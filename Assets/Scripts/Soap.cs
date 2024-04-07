@@ -13,7 +13,7 @@ public class Soap : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print(collision.gameObject.tag);
+        //print(collision.gameObject.tag);
         if (collision.transform.CompareTag("Player"))
         {
             EventManager.Instance.AddScore();

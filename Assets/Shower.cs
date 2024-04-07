@@ -8,6 +8,7 @@ public class Shower : MonoBehaviour
 
     internal void StartShower()
     {
+        GetComponent<ShakeBehavior>().StartShake();
         animator.StartPlayback();
     }
 

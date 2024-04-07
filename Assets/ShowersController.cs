@@ -14,12 +14,16 @@ public class ShowersController : MonoBehaviour
             Instance = this;
     }
 
-    public void StartShowers()
+    public void StartShowers(float offset)
     {
-        foreach(var shower in showers)
+        print("Start showers ");
+
+        foreach (var shower in showers)
         {
             shower.StartShower();
         }
+
+        Invoke(nameof(StopShowers), offset);
     }
 
     public void StopShowers()

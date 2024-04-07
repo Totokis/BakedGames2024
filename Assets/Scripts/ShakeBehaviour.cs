@@ -15,7 +15,6 @@ public class ShakeBehavior : MonoBehaviour
     {
         // Save the original position of the object
         originalPosition = transform.localPosition;
-        StartShake();
     }
 
     // Call this method to start shaking

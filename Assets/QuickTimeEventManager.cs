@@ -10,14 +10,20 @@ public class QuickTimeEventManager : MonoBehaviour
         StartCoroutine(StartQTELoop());
     }
 
+    bool initial = true;
     IEnumerator StartQTELoop()
     {
+        if(initial)
+            yield return new WaitForSeconds(6f);
+        initial = false;
+
         float offset = UnityEngine.Random.Range(10, 16f);
-        yield return new WaitForSeconds(offset);
 
         if (UnityEngine.Random.value > 0.5f)
             PortalsController.instance.StartPortals(offset);
+        else ShowersController.Instance.StartShowers(offset);
 
+        yield return new WaitForSeconds(offset);
         StartCoroutine(StartQTELoop()); 
     }
 
