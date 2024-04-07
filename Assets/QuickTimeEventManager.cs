@@ -18,9 +18,12 @@ public class QuickTimeEventManager : MonoBehaviour
 
         Single offset = UnityEngine.Random.Range(10, 16f);
 
-        if (UnityEngine.Random.value > 0.5f)
-            PortalsController.instance.StartPortals(offset);
-        else ShowersController.Instance.StartShowers(offset);
+        yield return new WaitForSeconds(offset * UnityEngine.Random.value);
+
+        //if (UnityEngine.Random.value > 0.5f)
+        //    PortalsController.instance.StartPortals(offset);
+        //else
+        ShowersController.Instance.StartShowers(offset);
 
         yield return new WaitForSeconds(offset);
         StartCoroutine(StartQTELoop()); 

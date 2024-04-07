@@ -1,19 +1,33 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Shower : MonoBehaviour
 {
 
-    public Animator animator;
+    public ParticleSystem particleSystem;
 
     internal void StartShower()
     {
+        StartCoroutine(StartShowerCoroutine());
+    }
+
+    IEnumerator StartShowerCoroutine()
+    {
+        yield return new WaitForSeconds(UnityEngine.Random.Range(0.3f, 1f));
         GetComponent<ShakeBehavior>().StartShake();
-        animator.StartPlayback();
+        yield return new WaitForSeconds(UnityEngine.Random.Range(0.3f, 1f));
+        particleSystem.Play();
     }
 
     internal void StopShower()
     {
-        animator.StopPlayback();
+        StartCoroutine(StopShowerCoroutine());
+    }
+
+    IEnumerator StopShowerCoroutine()
+    {
+        yield return new WaitForSeconds(UnityEngine.Random.Range(0.1f, 1f));
+        particleSystem.Stop();
     }
 }

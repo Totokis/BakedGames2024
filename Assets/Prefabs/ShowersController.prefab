@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecbae2c18c3431a4e90a7f88ee8ac85d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showers: []
 --- !u!1001 &2615837493186326226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -260,6 +261,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7413120752314477003}
     m_Modifications:
+    - target: {fileID: 3748897845698275812, guid: 1db44a9adc9b84f47aec5ea62fbb233f, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748897845698275812, guid: 1db44a9adc9b84f47aec5ea62fbb233f, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748897845698275812, guid: 1db44a9adc9b84f47aec5ea62fbb233f, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 9727.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748897845698275812, guid: 1db44a9adc9b84f47aec5ea62fbb233f, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.21176471
+      objectReference: {fileID: 0}
     - target: {fileID: 5743709191915342057, guid: 1db44a9adc9b84f47aec5ea62fbb233f, type: 3}
       propertyPath: m_Name
       value: Shower (2)
