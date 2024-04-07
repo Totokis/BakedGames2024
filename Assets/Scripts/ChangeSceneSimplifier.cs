@@ -11,4 +11,9 @@ public class ChangeSceneSimplifier : MonoBehaviour
     {
         GetComponent<ChangeScene>().LoadOtherScene(SceneNames.IntroSTR);
     }
+
+    public void ChangeSceneToMenu()
+    {
+        GetComponent<ChangeScene>().LoadOtherScene(SceneNames.MainMenuSTR);
+    }
 }

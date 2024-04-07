@@ -660,7 +660,7 @@ MonoBehaviour:
   BlackScreen: {fileID: 1438864561}
   MainObjectToTurnOn: {fileID: 1438864560}
   FadingTime: 0.3
-  ShouldFadeOutAtTheStart: 0
+  ShouldFadeOutAtTheStart: 1
 --- !u!4 &1091397506
 Transform:
   m_ObjectHideFlags: 0
