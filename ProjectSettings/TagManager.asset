@@ -45,6 +45,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: WallDecoration
+    uniqueID: 2519195545
+    locked: 0
   - name: Showeree
     uniqueID: 2037050967
     locked: 0
@@ -53,6 +56,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 4243588421
+    locked: 0
+  - name: New Layer 5
+    uniqueID: 1246737867
     locked: 0
   m_RenderingLayers:
   - Default
