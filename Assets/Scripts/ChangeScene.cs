@@ -1,17 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//add this bibliothek for the working with scenes
 using UnityEngine.SceneManagement;
 using System;
 
 public class ChangeScene : MonoBehaviour
 {
-    public Image blackScreen;
-    public GameObject mainObjectToTurnOn;
-    public float fadingTime = 0.3f;
-
+    public Image BlackScreen;
+    public GameObject MainObjectToTurnOn;
+    public Single FadingTime = 0.3f;
+    public Boolean ShouldFadeOutAtTheStart = true;
     public void LoadOtherScene(String sceneName)
     {
         Time.timeScale = 1;
@@ -21,34 +19,37 @@ public class ChangeScene : MonoBehaviour
 
     void Start()
     {
-        FadeOut();
+        if(ShouldFadeOutAtTheStart)
+        {
+            FadeOut();
+        }
     }
 
     void FadeIn()
     {
-        mainObjectToTurnOn.SetActive(true);
-        blackScreen.canvasRenderer.SetAlpha(0);
-        blackScreen.CrossFadeAlpha(1, fadingTime, false);
+        MainObjectToTurnOn.SetActive(true);
+        BlackScreen.canvasRenderer.SetAlpha(0);
+        BlackScreen.CrossFadeAlpha(1, FadingTime, false);
     }
 
     void FadeOut()
     {
-        mainObjectToTurnOn.SetActive(true);
-        blackScreen.canvasRenderer.SetAlpha(1);
-        blackScreen.CrossFadeAlpha(0, fadingTime, false);
-        StartCoroutine("DisactiveBlackscreenAfterTime", fadingTime);
+        MainObjectToTurnOn.SetActive(true);
+        BlackScreen.canvasRenderer.SetAlpha(1);
+        BlackScreen.CrossFadeAlpha(0, FadingTime, false);
+        StartCoroutine("DisactiveBlackscreenAfterTime", FadingTime);
     }
 
     IEnumerator LoadSceneAfterTime(String sceneNameToLoad)
     {
-        yield return new WaitForSeconds(fadingTime);
+        yield return new WaitForSeconds(FadingTime);
         SceneManager.LoadScene(sceneNameToLoad);
         yield return null;
     }
     IEnumerable DisactiveBlackscreenAfterTime()
     {
-        yield return new WaitForSeconds(fadingTime);
-        mainObjectToTurnOn.SetActive(false);
+        yield return new WaitForSeconds(FadingTime);
+        MainObjectToTurnOn.SetActive(false);
         yield return null;
     }
 
