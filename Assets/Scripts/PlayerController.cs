@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private BoxCollider2D boxCollider;
     private StaminaController staminaController;
+    private AudioSource audioSource;
 
     public Transform pickupPoint;
 
@@ -29,13 +30,28 @@ public class PlayerController : MonoBehaviour
         collider = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        audioSource = GetComponent<AudioSource>();
         staminaController = GetComponent<StaminaController>();
     }
 
     void Update()
     {
         _playerInput = Input.GetAxisRaw("Horizontal");
-        animator.SetFloat("Speed", Math.Abs(_playerInput * _speed));
+        var playerSpeed = Math.Abs(_playerInput * _speed);
+        animator.SetFloat("Speed", playerSpeed);
+
+        if (playerSpeed != 0)
+        {
+            if (!audioSource.isPlaying)
+                audioSource.Play();
+            audioSource.volume = 1;
+        }
+        else
+        {
+            if (!audioSource.isPlaying)
+                audioSource.Stop();
+            audioSource.volume = 0;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space) && staminaController.CanUseSlide())
         {
@@ -119,9 +135,9 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(-1 * _slideSpeed * Time.fixedDeltaTime, 0);
         }
-        else if((_playerInput == 1 && !_isSlidingRight) || (_playerInput == -1 && !_isSlidingLeft))
+        else if ((_playerInput == 1 && !_isSlidingRight) || (_playerInput == -1 && !_isSlidingLeft))
         {
-            rb.velocity = new Vector2( _playerInput * _speed * Time.fixedDeltaTime, 0);
+            rb.velocity = new Vector2(_playerInput * _speed * Time.fixedDeltaTime, 0);
         }
     }
 
