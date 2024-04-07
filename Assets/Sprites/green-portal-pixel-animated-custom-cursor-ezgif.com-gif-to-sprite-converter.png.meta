@@ -120,6 +120,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -332,7 +358,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      green-portal-pixel-animated-custom-cursor-ezgif.com-gif-to-sprite-converter_0: 267407929040686757
+      green-portal-pixel-animated-custom-cursor-ezgif.com-gif-to-sprite-converter_1: -2222749349859083955
+      green-portal-pixel-animated-custom-cursor-ezgif.com-gif-to-sprite-converter_2: 1366064840466295836
+      green-portal-pixel-animated-custom-cursor-ezgif.com-gif-to-sprite-converter_3: -8641068695900345777
+      green-portal-pixel-animated-custom-cursor-ezgif.com-gif-to-sprite-converter_4: -3769727609069901113
+      green-portal-pixel-animated-custom-cursor-ezgif.com-gif-to-sprite-converter_5: -4150986746845013663
+      green-portal-pixel-animated-custom-cursor-ezgif.com-gif-to-sprite-converter_6: 551936320816518190
+      green-portal-pixel-animated-custom-cursor-ezgif.com-gif-to-sprite-converter_7: -334961724319383226
+      green-portal-pixel-animated-custom-cursor-ezgif.com-gif-to-sprite-converter_8: -4780038197307932008
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
