@@ -21,4 +21,8 @@ public class ChangeSceneSimplifier : MonoBehaviour
     {
         GetComponent<ChangeScene>().LoadOtherScene(SceneNames.GameOverSTR);
     }
+    public void ChangeSceneToTutorial()
+    {
+        GetComponent<ChangeScene>().LoadOtherScene(SceneNames.TutorialSTR);
+    }
 }
