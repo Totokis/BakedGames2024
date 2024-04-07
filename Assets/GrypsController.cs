@@ -4,11 +4,14 @@ using UnityEngine;
 public class GrypsController : MonoBehaviour
 {
     public AudioClip[] Grypses;
+    public AudioSource OknoWCeli;
+
+    public int[] grypsIndicesOrder;
+    public int currentGryps = 0;
 
     void Start()
     {
-        var shuff = ArrayShuffler.GetShuffledIndices(Grypses.Length);
-        foreach(var shuffIndex in shuff) { print(shuffIndex); }
+        grypsIndicesOrder = ArrayShuffler.GetShuffledIndices(Grypses.Length);
     }
 
     bool initial = true;
@@ -18,6 +21,9 @@ public class GrypsController : MonoBehaviour
             yield return new WaitForSeconds(6f);
 
         initial = false;
+
+        OknoWCeli.PlayOneShot(Grypses[currentGryps]);
+        currentGryps++;
 
         yield return new WaitForSeconds(UnityEngine.Random.Range(8f, 12f));
 
