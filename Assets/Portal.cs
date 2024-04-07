@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    public bool IsFirst = false;
+    public Boolean IsFirst = false;
 
     public SpriteRenderer Renderer;
 

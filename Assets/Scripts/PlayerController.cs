@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
     private Boolean _isMidSlide => _isSlidingLeft || _isSlidingRight;
     private Single _playerInput = 0;
     private Single _jumpTime = 0.5f;
-    private bool canSlideLeft = true;
-    private bool canSlideRight = true;
+    private Boolean canSlideLeft = true;
+    private Boolean canSlideRight = true;
 
     [SerializeField] private Single _speed = 250;
     [SerializeField] private Single _slideSpeed = 400;

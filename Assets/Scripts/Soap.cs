@@ -14,7 +14,7 @@ public class Soap : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("Player") && !GameManager.Instance.isWarningDisplayed)
+        if (collision.transform.CompareTag("Player") && !GameManager.Instance._isWarningDisplayed)
         {
             EventManager.Instance.AddScore();
             Destroy(gameObject);
@@ -27,13 +27,13 @@ public class Soap : MonoBehaviour
 
     private void DisplayWarning()
     {
-        if (GameManager.Instance.isWarningDisplayed)
+        if (GameManager.Instance._isWarningDisplayed)
         {
             return;
         }
 
         transform.parent.Find("Warning").gameObject.SetActive(true);
-        GameManager.Instance.isWarningDisplayed = true;
+        GameManager.Instance._isWarningDisplayed = true;
         Invoke("EndGame", 1f);
     }
 

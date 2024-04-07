@@ -16,15 +16,4 @@ public class Shower : MonoBehaviour
     {
         animator.StopPlayback();
     }
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

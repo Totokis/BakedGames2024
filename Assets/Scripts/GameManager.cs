@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public bool isWarningDisplayed = false;
+    public Boolean _isWarningDisplayed = false;
     public static GameManager Instance { get; private set; }
     private void Awake()
     {

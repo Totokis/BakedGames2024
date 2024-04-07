@@ -7,7 +7,6 @@ public class ShowersController : MonoBehaviour
     [SerializeField]
     private Shower[] showers;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         if(Instance == null)
@@ -32,11 +31,5 @@ public class ShowersController : MonoBehaviour
         {
             shower.StopShower();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -1,23 +1,22 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
 public class QuickTimeEventManager : MonoBehaviour
 {
-
-    
+    Boolean _initial = true;
     void Start()
     {
         StartCoroutine(StartQTELoop());
     }
 
-    bool initial = true;
     IEnumerator StartQTELoop()
     {
-        if(initial)
+        if(_initial)
             yield return new WaitForSeconds(6f);
-        initial = false;
+        _initial = false;
 
-        float offset = UnityEngine.Random.Range(10, 16f);
+        Single offset = UnityEngine.Random.Range(10, 16f);
 
         if (UnityEngine.Random.value > 0.5f)
             PortalsController.instance.StartPortals(offset);
@@ -25,11 +24,5 @@ public class QuickTimeEventManager : MonoBehaviour
 
         yield return new WaitForSeconds(offset);
         StartCoroutine(StartQTELoop()); 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
