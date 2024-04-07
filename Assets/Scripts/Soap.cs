@@ -15,10 +15,12 @@ public class Soap : MonoBehaviour
         }
     }
 
+    private bool picked = false;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.CompareTag("Player") && !GameManager.Instance._isWarningDisplayed)
         {
+            picked = true;
             EventManager.Instance.AddScore();
             AudioSource.PlayOneShot(SoapPickup);
             GetComponent<BoxCollider2D>().enabled = false;
@@ -27,11 +29,13 @@ public class Soap : MonoBehaviour
             LeanTween.scale(gameObject, Vector3.zero, 0.5f)
                 .setEaseOutSine();
 
+            print("Pick");
 
-            Invoke(nameof(GetRid), 2f);
+            Invoke(nameof(GetRid), 1f);
         }
-        else if (collision.transform.CompareTag("Floor"))
+        else if (!picked && collision.transform.CompareTag("Floor"))
         {
+            print("Floor");
             Invoke("DisplayWarning", 2f);
         }
     }
@@ -43,10 +47,11 @@ public class Soap : MonoBehaviour
 
     private void DisplayWarning()
     {
-        if (GameManager.Instance._isWarningDisplayed)
+        if (picked || GameManager.Instance._isWarningDisplayed)
         {
             return;
         }
+        print("Warning");
 
         transform.parent.Find("Warning").gameObject.SetActive(true);
         GameManager.Instance._isWarningDisplayed = true;
