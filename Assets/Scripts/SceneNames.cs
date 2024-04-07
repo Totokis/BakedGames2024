@@ -7,4 +7,5 @@ public static class SceneNames
     public static readonly String GameSTR = "Game";
     public static readonly String GameOverSTR = "GameOver";
     public static readonly String TutorialSTR = "Tutorial";
+    public static readonly string OutroScene = "OutroSequence";
 }

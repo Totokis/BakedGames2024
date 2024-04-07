@@ -14,7 +14,7 @@ public class ChangeScene : MonoBehaviour
     {
         Time.timeScale = 1;
         FadeIn();
-        StartCoroutine("LoadSceneAfterTime", sceneName);
+        StartCoroutine(nameof(LoadSceneAfterTime), sceneName);
     }
 
     void Start()
