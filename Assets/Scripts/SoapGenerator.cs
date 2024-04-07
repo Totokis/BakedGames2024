@@ -18,7 +18,7 @@ public class SoapGenerator : MonoBehaviour
         spawningTime -= Time.deltaTime;
         if (spawningTime <= 0)
         {
-            var showereeIndex = Random.Range(0, showerees.Count - 1);
+            var showereeIndex = Random.Range(0, showerees.Count);
 
             GameObject spawnedSoap = Instantiate(soapPrefab, showerees[showereeIndex]);
             Vector2 horizontalDirection = UnityEngine.Random.value > 0.5f ? Vector2.right : Vector2.left;
