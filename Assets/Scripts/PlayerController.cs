@@ -18,12 +18,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D collider;
     private Animator animator;
+    private BoxCollider2D boxCollider;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     void Update()
@@ -53,12 +55,16 @@ public class PlayerController : MonoBehaviour
             if (_playerInput > 0 && canSlideRight)
             {
                 //RotateSpriteLeft();
+                boxCollider.offset = new Vector2(collider.offset.x, 0.06f);
+                boxCollider.size = new Vector3(0.47f, 0.12f);
                 _isSlidingLeft = true;
                 animator.SetBool("IsSliding", true);
             }
             else if (_playerInput < 0 && canSlideLeft)
             {
                 //RotateSpriteRight();
+                boxCollider.offset = new Vector2(collider.offset.x, 0.06f);
+                boxCollider.size = new Vector3(0.47f, 0.12f);
                 _isSlidingRight = true;
                 animator.SetBool("IsSliding", true);
             }
@@ -90,6 +96,8 @@ public class PlayerController : MonoBehaviour
 
     private void UnlockJump()
     {
+        boxCollider.offset = new Vector2(collider.offset.x, 0.1804221f);
+        boxCollider.size = new Vector3(0.1163553f, 0.364229f);
         _isSlidingLeft = false;
         _isSlidingRight = false;
         animator.SetBool("IsSliding", false);
