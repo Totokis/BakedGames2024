@@ -8,7 +8,7 @@ public class GrypsController : MonoBehaviour
     public AudioSource OknoWCeli;
 
     public int[] grypsIndicesOrder;
-    public int currentGryps = 0;
+    public int currentGrypsIndex = 0;
 
     void Start()
     {
@@ -20,21 +20,24 @@ public class GrypsController : MonoBehaviour
     private IEnumerator StartGrypsing()
     {
         if(initial)
-            yield return new WaitForSeconds(6f);
+            yield return new WaitForSeconds(4f);
 
         initial = false;
-        print("gryps");
-        OknoWCeli.PlayOneShot(Grypses[grypsIndicesOrder[currentGryps]]);
-        currentGryps++;
 
-        yield return new WaitForSeconds(Grypses[currentGryps].length + UnityEngine.Random.Range(2f, 3.5f));
+        var currentGryps = Grypses[grypsIndicesOrder[currentGrypsIndex]];
+
+        OknoWCeli.PlayOneShot(currentGryps);
+        var currentGrypsLength = currentGryps.length;
+
+        currentGrypsIndex++;
+        if (currentGrypsIndex >= Grypses.Length - 1)
+        {
+            currentGrypsIndex = 0;
+        }
+
+        yield return new WaitForSeconds(currentGrypsLength + UnityEngine.Random.Range(2f, 3.5f));
 
         StartCoroutine(StartGrypsing());
-    }
-
-    void Update()
-    {
-        
     }
 }
 
