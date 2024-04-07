@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -12,6 +13,7 @@ public class GrypsController : MonoBehaviour
     void Start()
     {
         grypsIndicesOrder = ArrayShuffler.GetShuffledIndices(Grypses.Length);
+        StartCoroutine(StartGrypsing());
     }
 
     bool initial = true;
@@ -21,11 +23,11 @@ public class GrypsController : MonoBehaviour
             yield return new WaitForSeconds(6f);
 
         initial = false;
-
-        OknoWCeli.PlayOneShot(Grypses[currentGryps]);
+        print("gryps");
+        OknoWCeli.PlayOneShot(Grypses[grypsIndicesOrder[currentGryps]]);
         currentGryps++;
 
-        yield return new WaitForSeconds(UnityEngine.Random.Range(8f, 12f));
+        yield return new WaitForSeconds(Grypses[currentGryps].length + UnityEngine.Random.Range(2.5f, 4f));
 
         StartCoroutine(StartGrypsing());
     }
@@ -41,6 +43,7 @@ public class ArrayShuffler
     // Method to shuffle indices of an array using Unity's Random
     public static int[] GetShuffledIndices(int arrayLength)
     {
+        UnityEngine.Random.InitState((int)DateTime.Now.Ticks);
         // Create an array of indices [0, 1, 2, ..., arrayLength-1]
         int[] indices = new int[arrayLength];
         for (int i = 0; i < arrayLength; i++)
