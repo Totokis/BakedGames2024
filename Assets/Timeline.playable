@@ -319,6 +319,38 @@ MonoBehaviour:
   m_Loop: 0
   m_Version: 1
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
+--- !u!114 &-5126907579666052265
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 0
+  m_Retroactive: 0
+  m_EmitOnce: 1
+  m_Asset: {fileID: 11400000, guid: b2dd5675d1cf34ac8a392529b8ae7d80, type: 2}
+--- !u!114 &-5109881352989478804
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 4.883333333333334
+  m_Retroactive: 0
+  m_EmitOnce: 1
+  m_Asset: {fileID: 11400000, guid: 57e7435b26d264f3c9915b56118a07fe, type: 2}
 --- !u!114 &-4039481786158116691
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -344,7 +376,7 @@ MonoBehaviour:
     m_Start: 4.9123125000000005
     m_ClipIn: 0
     m_Asset: {fileID: -81989856452345597}
-    m_Duration: 2.2876875
+    m_Duration: 2.2876875000000005
     m_TimeScale: 1
     m_ParentTrack: {fileID: -4039481786158116691}
     m_EaseInDuration: 0.1
@@ -410,11 +442,29 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: End
   m_Markers:
-    m_Objects: []
+    m_Objects:
+    - {fileID: -3650294745789851249}
+    - {fileID: -3659475662033358883}
   m_TrackProperties:
     volume: 1
     stereoPan: 0
     spatialBlend: 0
+--- !u!114 &-3659475662033358883
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 7.2
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: cfe56fc7c336a4f3b91eb920c1f2e82e, type: 2}
 --- !u!74 &-3659394670147062030
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -590,6 +640,22 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events: []
+--- !u!114 &-3650294745789851249
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 4.9123125000000005
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: fb4cc0420034c4db583257ab259de4ae, type: 2}
 --- !u!74 &-3622541145968685729
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -1458,7 +1524,9 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Heart beat sound effect free copyright
   m_Markers:
-    m_Objects: []
+    m_Objects:
+    - {fileID: -5126907579666052265}
+    - {fileID: -5109881352989478804}
   m_TrackProperties:
     volume: 1
     stereoPan: 0
