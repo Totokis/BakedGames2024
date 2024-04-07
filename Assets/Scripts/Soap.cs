@@ -30,6 +30,7 @@ public class Soap : MonoBehaviour
                 .setEaseOutSine();
 
             print("Pick");
+            GameManager.Instance.DisplaySoapOnPile();
 
             Invoke(nameof(GetRid), 1f);
         }
