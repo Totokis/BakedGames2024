@@ -7,7 +7,7 @@ public class QuickTimeEventManager : MonoBehaviour
     Boolean _initial = true;
     void Start()
     {
-        StartCoroutine(StartQTELoop());
+        //PJ: StartCoroutine(StartQTELoop());
     }
 
     IEnumerator StartQTELoop()
