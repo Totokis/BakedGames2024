@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 339209097801721228}
   - component: {fileID: 7966616513466283188}
-  - component: {fileID: 1205418302611171211}
+  - component: {fileID: 6554323664885523099}
   m_Layer: 0
   m_Name: Showeree1
   m_TagString: Untagged
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 2037050967
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: -5312861309578312499, guid: 9d60b156cc9564a5cbc3a65a92923ec1, type: 3}
+  m_Sprite: {fileID: 8009261324042388838, guid: 10e76d4c5b699814982e3fd6f4782cc7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -91,7 +91,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1205418302611171211
+--- !u!95 &6554323664885523099
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -101,7 +101,7 @@ Animator:
   m_GameObject: {fileID: 6549627474924950109}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6be4c448e1bee01499c4332ea6c6d8f9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
