@@ -272,8 +272,8 @@ MonoBehaviour:
   m_text: "Aby porusza\u0107 si\u0119 szybciej mo\u017Cesz u\u017Cy\u0107 \u015Blizgu.
     Podczas biegu wci\u015Bnij spacj\u0119, a posta\u0107 wykona \u015Blizg"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 708e72b222e49dd42b5070c4faf0c8f7, type: 2}
+  m_sharedMaterial: {fileID: 5987051574848711543, guid: 708e72b222e49dd42b5070c4faf0c8f7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -694,8 +694,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Zacznij gr\u0119"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 708e72b222e49dd42b5070c4faf0c8f7, type: 2}
+  m_sharedMaterial: {fileID: 5987051574848711543, guid: 708e72b222e49dd42b5070c4faf0c8f7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -725,7 +725,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1086,8 +1086,8 @@ MonoBehaviour:
   m_text: "Ka\u017Cdy \u015Blizg kosztuje stamin\u0119, tak\u017Ce pami\u0119taj
     kontrolowa\u0107 jej poziom"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 708e72b222e49dd42b5070c4faf0c8f7, type: 2}
+  m_sharedMaterial: {fileID: 5987051574848711543, guid: 708e72b222e49dd42b5070c4faf0c8f7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1117,7 +1117,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1393,8 +1393,8 @@ MonoBehaviour:
   m_text: "Poruszasz stra\u017Cnikiem przy u\u017Cyciu strza\u0142ek lewo/prawo lub
     A/D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 708e72b222e49dd42b5070c4faf0c8f7, type: 2}
+  m_sharedMaterial: {fileID: 5987051574848711543, guid: 708e72b222e49dd42b5070c4faf0c8f7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1424,7 +1424,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1529,8 +1529,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Celem gry jest podnoszenie wszystkich myde\u0142 z pod\u0142ogi"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 708e72b222e49dd42b5070c4faf0c8f7, type: 2}
+  m_sharedMaterial: {fileID: 5987051574848711543, guid: 708e72b222e49dd42b5070c4faf0c8f7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1560,7 +1560,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
