@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 176968954}
   - component: {fileID: 176968953}
   - component: {fileID: 176968955}
+  - component: {fileID: 176968956}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -324,6 +325,15 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!170 &176968956
+AudioDistortionFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176968952}
+  m_Enabled: 1
+  m_DistortionLevel: 0.8
 --- !u!1 &296289947
 GameObject:
   m_ObjectHideFlags: 0
