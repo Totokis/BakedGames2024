@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
 
     public void DisplaySoapOnPile()
     {
-        soapPile.GetChild(scoreManager.Score - 1).GetComponent<SpriteRenderer>().enabled = true;
+        if (soapPile.childCount >= scoreManager.Score)
+        {
+            soapPile.GetChild(scoreManager.Score - 1).GetComponent<SpriteRenderer>().enabled = true;
+        }
     }
 }
