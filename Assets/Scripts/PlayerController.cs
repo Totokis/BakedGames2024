@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     private Boolean canSlideLeft = true;
     private Boolean canSlideRight = true;
 
-    [SerializeField] private Single _speed = 285;
-    [SerializeField] private Single _slideSpeed = 415;
+    [SerializeField] private Single _speed = 300;
+    [SerializeField] private Single _slideSpeed = 425;
 
     private Rigidbody2D rb;
     private Collider2D collider;
