@@ -701,6 +701,12 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 4713070497817507447, guid: cbaa32a71cff541ef87553e20613c725, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 8923799106350310120, guid: cbaa32a71cff541ef87553e20613c725, type: 2}
+    value: {fileID: 6765504767017379754}
+  - key: {fileID: -9054867961773664985, guid: cbaa32a71cff541ef87553e20613c725, type: 2}
+    value: {fileID: 1752123389}
+  - key: {fileID: 7629956161266977271, guid: cbaa32a71cff541ef87553e20613c725, type: 2}
+    value: {fileID: 1938817000}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1085515265
@@ -1159,7 +1165,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1
+  orthographic size: 0.9
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1966,7 +1972,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6765504767017379753}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0797, y: 0.0151, z: 0}
   m_LocalScale: {x: 1.0248902, y: 0.92240125, z: 2.7672038}
   m_ConstrainProportionsScale: 1
@@ -1984,6 +1990,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5768579174219370444}
   - component: {fileID: 1085082542266425381}
+  - component: {fileID: 6765504767017379754}
   m_Layer: 0
   m_Name: chlop_hand
   m_TagString: Untagged
@@ -1991,6 +1998,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &6765504767017379754
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765504767017379753}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &7436427044198009480 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7436427043813878386, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
