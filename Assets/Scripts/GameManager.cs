@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -17,11 +19,21 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void DisplaySoapOnPile()
+    public Vector3 DisplaySoapOnPile()
     {
         if (soapPile.childCount >= scoreManager.Score)
         {
-            soapPile.GetChild(scoreManager.Score - 1).GetComponent<SpriteRenderer>().enabled = true;
+            GameObject soap = soapPile.GetChild(scoreManager.Score - 1).gameObject;
+            StartCoroutine(ShowOnPile(soap));
+            return soap.transform.position;
         }
+        return Vector3.zero;
+    }
+
+    private IEnumerator ShowOnPile(GameObject soap)
+    {
+        yield return new WaitForSeconds(0.69f);
+        soap.GetComponent<SpriteRenderer>().enabled = true;
+
     }
 }
