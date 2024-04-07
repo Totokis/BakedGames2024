@@ -16,4 +16,9 @@ public class ChangeSceneSimplifier : MonoBehaviour
     {
         GetComponent<ChangeScene>().LoadOtherScene(SceneNames.MainMenuSTR);
     }
+
+    public void ChangeSceneToGameOver()
+    {
+        GetComponent<ChangeScene>().LoadOtherScene(SceneNames.GameOverSTR);
+    }
 }
