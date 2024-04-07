@@ -165,6 +165,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -707,7 +733,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      player_slide-Sheet_0: -2277117440253897091
+      player_slide-Sheet_1: 6108894729064652430
+      player_slide-Sheet_10: -4389909426419970879
+      player_slide-Sheet_11: -3178067533254742482
+      player_slide-Sheet_12: -2477308100070694814
+      player_slide-Sheet_13: 2825130781185156083
+      player_slide-Sheet_14: -3358345280161391890
+      player_slide-Sheet_15: 3388308176769678228
+      player_slide-Sheet_16: 6027206753823554330
+      player_slide-Sheet_17: 5136587981374481387
+      player_slide-Sheet_18: -1408853549140556391
+      player_slide-Sheet_19: -617950466876733818
+      player_slide-Sheet_2: 1571570438811315863
+      player_slide-Sheet_20: -9098492214877371067
+      player_slide-Sheet_21: 7617271234750225106
+      player_slide-Sheet_22: -303384980620475448
+      player_slide-Sheet_23: -3775438192647914097
+      player_slide-Sheet_3: 1559350853460860538
+      player_slide-Sheet_4: 1229753038758625553
+      player_slide-Sheet_5: 8893791573168190239
+      player_slide-Sheet_6: 2063241590401071799
+      player_slide-Sheet_7: 1176640668551865311
+      player_slide-Sheet_8: -3682730026814388190
+      player_slide-Sheet_9: 4379534700643823687
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
