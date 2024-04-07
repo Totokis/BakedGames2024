@@ -32,6 +32,16 @@ public class PlayerController : MonoBehaviour
         {
             SwapSprite();
         }
+
+        var horizontalInput = Input.GetAxis("Horizontal");
+        if (horizontalInput > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = false; // Original orientation (facing right)
+        }
+        else if (horizontalInput < 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true; // Flip sprite (facing left)
+        }
     }
 
     void SwapSprite()
