@@ -20,7 +20,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private BoxCollider2D boxCollider;
     private StaminaController staminaController;
-    private AudioSource audioSource;
+    public  AudioSource audioSourceWalking;
+    public AudioSource audioSourceSliding;
 
     public Transform pickupPoint;
 
@@ -30,7 +31,6 @@ public class PlayerController : MonoBehaviour
         collider = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
-        audioSource = GetComponent<AudioSource>();
         staminaController = GetComponent<StaminaController>();
     }
 
@@ -42,15 +42,15 @@ public class PlayerController : MonoBehaviour
 
         if (playerSpeed != 0)
         {
-            if (!audioSource.isPlaying)
-                audioSource.Play();
-            audioSource.volume = 1;
+            if (!audioSourceWalking.isPlaying)
+                audioSourceWalking.Play();
+            audioSourceWalking.volume = 1;
         }
         else
         {
-            if (!audioSource.isPlaying)
-                audioSource.Stop();
-            audioSource.volume = 0;
+            if (!audioSourceWalking.isPlaying)
+                audioSourceWalking.Stop();
+            audioSourceWalking.volume = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && staminaController.CanUseSlide())
@@ -72,6 +72,8 @@ public class PlayerController : MonoBehaviour
     {
         if (!_isMidSlide)
         {
+            audioSourceSliding.Play();
+
             if (_playerInput > 0 && canSlideRight)
             {
                 //RotateSpriteLeft();
