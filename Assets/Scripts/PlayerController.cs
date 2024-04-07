@@ -29,19 +29,18 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         _playerInput = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("Speed", Math.Abs(_playerInput * _speed));
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             SwapSprite();
         }
 
-        var horizontalInput = Input.GetAxis("Horizontal");
-        animator.SetFloat("Speed", Math.Abs(horizontalInput));
-        if (horizontalInput > 0)
+        if (_playerInput > 0)
         {
             GetComponent<SpriteRenderer>().flipX = false; // Original orientation (facing right)
         }
-        else if (horizontalInput < 0)
+        else if (_playerInput < 0)
         {
             GetComponent<SpriteRenderer>().flipX = true; // Flip sprite (facing left)
         }
