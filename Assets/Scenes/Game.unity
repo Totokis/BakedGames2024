@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 339209097801721228, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.53
+      value: 1.89
       objectReference: {fileID: 0}
     - target: {fileID: 339209097801721228, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1721,7 +1721,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1811740208548759688, guid: f5772354d056d1c4da8ad330dc1ca5d9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 478.5
+      value: 449.84
       objectReference: {fileID: 0}
     - target: {fileID: 1811740208548759688, guid: f5772354d056d1c4da8ad330dc1ca5d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2480,7 +2480,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 339209097801721228, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.52
+      value: -4.7
       objectReference: {fileID: 0}
     - target: {fileID: 339209097801721228, guid: 466799a491b39814cb4723b8395b8ff2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2623,6 +2623,10 @@ PrefabInstance:
     - target: {fileID: 1167141540317371565, guid: 4bc77f51eb0d21a4fafa984c1319b484, type: 3}
       propertyPath: m_Name
       value: PortalController
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167141540317371565, guid: 4bc77f51eb0d21a4fafa984c1319b484, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1457534574853410511, guid: 4bc77f51eb0d21a4fafa984c1319b484, type: 3}
       propertyPath: Renderer
