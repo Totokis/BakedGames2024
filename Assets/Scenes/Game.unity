@@ -756,17 +756,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &601490531 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8306194954042207469, guid: d30be9a10ece70745844e582a35a29ad, type: 3}
-  m_PrefabInstance: {fileID: 5326406250559090739}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb7cc093af6c41842afc161e6473f831, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &741507804
 GameObject:
   m_ObjectHideFlags: 0
@@ -2010,17 +1999,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1776583627 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 891820839317618096, guid: d30be9a10ece70745844e582a35a29ad, type: 3}
-  m_PrefabInstance: {fileID: 5326406250559090739}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb7cc093af6c41842afc161e6473f831, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1824552621
 GameObject:
   m_ObjectHideFlags: 0
@@ -2378,28 +2356,6 @@ Transform:
   - {fileID: 1033711724}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2000638381 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2817433644257156451, guid: d30be9a10ece70745844e582a35a29ad, type: 3}
-  m_PrefabInstance: {fileID: 5326406250559090739}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb7cc093af6c41842afc161e6473f831, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2015918597 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2792116592948665549, guid: d30be9a10ece70745844e582a35a29ad, type: 3}
-  m_PrefabInstance: {fileID: 5326406250559090739}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb7cc093af6c41842afc161e6473f831, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2084395558
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,26 +2593,6 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.maxColor.a
       value: 0.21176471
       objectReference: {fileID: 0}
-    - target: {fileID: 3211591098365178879, guid: d30be9a10ece70745844e582a35a29ad, type: 3}
-      propertyPath: showers.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3211591098365178879, guid: d30be9a10ece70745844e582a35a29ad, type: 3}
-      propertyPath: 'showers.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2015918597}
-    - target: {fileID: 3211591098365178879, guid: d30be9a10ece70745844e582a35a29ad, type: 3}
-      propertyPath: 'showers.Array.data[1]'
-      value: 
-      objectReference: {fileID: 601490531}
-    - target: {fileID: 3211591098365178879, guid: d30be9a10ece70745844e582a35a29ad, type: 3}
-      propertyPath: 'showers.Array.data[2]'
-      value: 
-      objectReference: {fileID: 2000638381}
-    - target: {fileID: 3211591098365178879, guid: d30be9a10ece70745844e582a35a29ad, type: 3}
-      propertyPath: 'showers.Array.data[3]'
-      value: 
-      objectReference: {fileID: 1776583627}
     - target: {fileID: 3329797302608522325, guid: d30be9a10ece70745844e582a35a29ad, type: 3}
       propertyPath: m_SortingLayer
       value: 3
@@ -2744,6 +2680,10 @@ PrefabInstance:
     - target: {fileID: 8029490374837048939, guid: d30be9a10ece70745844e582a35a29ad, type: 3}
       propertyPath: InitialModule.startColor.maxColor.a
       value: 0.21176471
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210392244405066831, guid: d30be9a10ece70745844e582a35a29ad, type: 3}
+      propertyPath: m_Volume
+      value: 0.807
       objectReference: {fileID: 0}
     - target: {fileID: 8921576381183614069, guid: d30be9a10ece70745844e582a35a29ad, type: 3}
       propertyPath: m_SortingLayer

@@ -7,7 +7,7 @@ public class QuickTimeEventManager : MonoBehaviour
     Boolean _initial = true;
     void Start()
     {
-        //PJ: StartCoroutine(StartQTELoop());
+        StartCoroutine(StartQTELoop());
     }
 
     IEnumerator StartQTELoop()
@@ -16,9 +16,9 @@ public class QuickTimeEventManager : MonoBehaviour
             yield return new WaitForSeconds(6f);
         _initial = false;
 
-        Single offset = UnityEngine.Random.Range(10, 16f);
+        Single offset = UnityEngine.Random.Range(11, 16f);
 
-        yield return new WaitForSeconds(offset * UnityEngine.Random.value);
+        yield return new WaitForSeconds(UnityEngine.Random.Range(1.5f, 3));
 
         //if (UnityEngine.Random.value > 0.5f)
         //    PortalsController.instance.StartPortals(offset);

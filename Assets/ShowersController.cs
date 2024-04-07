@@ -7,6 +7,9 @@ public class ShowersController : MonoBehaviour
     [SerializeField]
     private Shower[] showers;
 
+    public AudioSource AudioSource;
+    public AudioClip ShowerClip;
+
     void Start()
     {
         if(Instance == null)
@@ -17,6 +20,7 @@ public class ShowersController : MonoBehaviour
     {
         print("Start showers ");
 
+        AudioSource.PlayOneShot(ShowerClip);
         foreach (var shower in showers)
         {
             shower.StartShower();
@@ -27,6 +31,7 @@ public class ShowersController : MonoBehaviour
 
     public void StopShowers()
     {
+        AudioSource.Stop();
         foreach (var shower in showers)
         {
             shower.StopShower();
