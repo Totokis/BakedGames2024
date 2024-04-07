@@ -17,11 +17,13 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private Collider2D collider;
+    private Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
         }
 
         var horizontalInput = Input.GetAxis("Horizontal");
+        animator.SetFloat("Speed", Math.Abs(horizontalInput));
         if (horizontalInput > 0)
         {
             GetComponent<SpriteRenderer>().flipX = false; // Original orientation (facing right)
