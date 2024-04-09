@@ -22,6 +22,7 @@ public class Soap : MonoBehaviour
         {
             picked = true;
             EventManager.Instance.AddScore();
+            GameManager.Instance.Score++;
             AudioSource.PlayOneShot(SoapPickup);
             GetComponent<BoxCollider2D>().enabled = false;
             Destroy(GetComponent<Rigidbody2D>());

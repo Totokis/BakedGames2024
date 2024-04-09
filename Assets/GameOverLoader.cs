@@ -5,6 +5,6 @@ public class GameOverLoader : MonoBehaviour
 {
     private void OnEnable()
     {
-        FindFirstObjectByType<ChangeSceneSimplifier>().ChangeSceneToGameOver();
+        FindFirstObjectByType<ChangeSceneSimplifier>().ChangeSceneToScoreBoard();
     }
 }

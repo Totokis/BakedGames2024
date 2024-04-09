@@ -4,6 +4,10 @@ public class ChangeSceneSimplifier : MonoBehaviour
 {
     public void ChangeSceneToGame()
     {
+        if (GameManager.Instance != null) {
+        
+            GameManager.Instance.DestroyThyself();
+        }
         GetComponent<ChangeScene>().LoadOtherScene(SceneNames.GameSTR);
     }
 
@@ -21,6 +25,12 @@ public class ChangeSceneSimplifier : MonoBehaviour
     {
         GetComponent<ChangeScene>().LoadOtherScene(SceneNames.GameOverSTR);
     }
+
+    public void ChangeSceneToScoreBoard()
+    {
+        GetComponent<ChangeScene>().LoadOtherScene(SceneNames.ScoreBoard);
+    }
+
     public void ChangeSceneToTutorial()
     {
         GetComponent<ChangeScene>().LoadOtherScene(SceneNames.TutorialSTR);

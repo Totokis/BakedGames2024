@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public ScoreManager scoreManager;
 
     public Transform soapPile;
+
+    public int Score = 0;
     public static GameManager Instance { get; private set; }
     private void Awake()
     {
@@ -17,6 +19,10 @@ public class GameManager : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
+
+        Score = 0;
+        _isWarningDisplayed = false;
+        DontDestroyOnLoad(this.gameObject);
     }
 
     public Vector3 DisplaySoapOnPile()
@@ -29,6 +35,13 @@ public class GameManager : MonoBehaviour
         }
         return Vector3.zero;
     }
+
+    public void DestroyThyself()
+    {
+        Destroy(gameObject);
+        Instance = null;    // because destroy doesn't happen until end of frame
+    }
+
 
     private IEnumerator ShowOnPile(GameObject soap)
     {

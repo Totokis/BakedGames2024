@@ -23,5 +23,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 7642ea46c6640bc469b9ffd69bb5275a
+  - enabled: 0
+    path: Assets/LeaderboardCreator/Scenes/DemoScene.unity
+    guid: 15f8e7fd89df8884fad64ded52d98315
+  - enabled: 1
+    path: Assets/LeaderboardCreator/Scenes/DemoScene1.unity
+    guid: 7d778a7b9e359664e81988311cb03aef
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
